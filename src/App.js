@@ -8,11 +8,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/*
+
           <Monsoon/>
           <Beams/>
+      
+        {/*
+          <Carousel/>
         */}
-        <Carousel/>
       </div>
     );
   }

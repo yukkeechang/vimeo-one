@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import '../Carousel.css';
-import '../App.css';
+//import '../App.css';
 import {CSSTransitionGroup} from 'react-transition-group';
+import whiteNext from '../images/whiteNext.png';
+import whitePrev from '../images/whitePrev.png';
+import blueNext from '../images/blueNext.png';
+import bluePrev from '../images/bluePrev.png';
 
-//TODO last: change images, change
+//TODO last: change images, align arrows to imagees
 var monsoon = "https://i.vimeocdn.com/video/595198868_505x160.jpg";
 var beam = "https://i.vimeocdn.com/video/589972810_530x315.jpg";
 var move = "https://i.vimeocdn.com/video/590587169_530x315.jpg";
@@ -17,7 +21,9 @@ class Carousel extends Component {
     super(props);
     this.state = {
       current: 0,
-      index: 0
+      index: 0,
+      turnBluePrev: false,
+      turnBlueNext: false
     }
   }
 
@@ -25,19 +31,25 @@ class Carousel extends Component {
     this.state.index === 0 ?
     this.setState({index: size-1, current: size-1}) :
     this.setState({index: this.state.current-1, current: this.state.current-1 })
+    this.setState({turnBluePrev: true, turnBlueNext: false})
   }
   next() {
     this.state.index === size-1 ?
     this.setState({index: 0, current: 0}) :
     this.setState({index: this.state.current+1, current: this.state.current+1 })
+    this.setState({turnBluePrev: false, turnBlueNext: true})
   }
+
+
   render() {
+    let arrowNext = this.state.turnBlueNext ? <img className="arrow" src={blueNext}/> :<img className="arrow" src={whiteNext}/>
+    let arrowPrev = this.state.turnBluePrev ? <img className="arrow" src={bluePrev}/> :<img className="arrow" src={whitePrev}/>
     return (
       <div>
-        <div className="backgroundImage" style={{backgroundImage: "https://i.vimeocdn.com/video/595198868_505x160.jpg"}}>
-        <div onClick={this.prev.bind(this)}>◀︎</div>
-        <div onClick={this.next.bind(this)}>▶︎</div>
-        <img src={images[this.state.current]} className="responsive-img"/>
+        <div className="grid-carousel">
+          <div onClick={this.prev.bind(this)} style={{backgroundColor: "blue"}}>{arrowPrev}</div>
+          <div style={{backgroundColor: "green"}}><img className="carouselImage" src={images[this.state.current]}/></div>
+          <div onClick={this.next.bind(this)}  style={{backgroundColor: "red"}}>{arrowNext}</div>
         </div>
       </div>
     )
@@ -48,10 +60,4 @@ class Carousel extends Component {
 
 
 export default Carousel;
-//
-// console.log("prev clicked")
-// console.log("index now: "+this.state.index)
-// console.log("current now: "+this.state.current)
-
-// console.log("index after set state "+this.state.index)
-// console.log("current after set state "+this.state.current)
+//className="backgroundImage" style={{backgroundImage: "https://i.vimeocdn.com/video/595198868_505x160.jpg"}}
