@@ -1,49 +1,40 @@
-
-body {
-
+/*setting up CSS Grid*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+  padding: 5%;
+}
+.grid-monsoon{
 
 }
-.Beams {
-  display: grid;
-  grid-template-columns: repeat(2, 5fr);
-  grid-gap: 0.5em;
-  grid-auto-rows: minmax(100px, auto);
-  background-color: black;
+.grid-beams {
   color: white;
+  background-image: linear-gradient(to bottom, #282828, #808080, 	#D0D0D0);
 }
-.Beams > div {
-  padding: 5%;
-}
-.Monsoon{
-  display: grid;
-  grid-template-columns: repeat(2, 5fr);
-  grid-gap: 0.5em;
-  grid-auto-rows: minmax(100px, auto);
-  padding: 5%;
-}
-  /*just for testing the layout purposes*/
-.Monsoon > div{
-    /*background-color: #eee;*/
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/*setting up responsiveness for the page*/
 @media screen and (max-width: 992px) {
-  body {
 
+  .grid > div{
+    padding: 5%;
   }
-  .Monsoon > div{
-    /*background-color: red;*/
-  }
-  .Monsoon{
+  .grid{
     display: grid;
     grid-template-columns: 100%;
     grid-gap: 0.5em;
     grid-auto-rows: minmax(100px, auto);
+    padding: 5%;
   }
 }
-
+/*custom css mobile/small screens*/
 @media screen and (max-width: 600px) {
-  body {
-
-
-  }
 }
