@@ -12,7 +12,6 @@
 }
 
 .carouselImage {
-  z-index: 6;
   top: 20px;
   max-width: 100%;
   height: auto;
@@ -28,8 +27,41 @@
   /*grid-template-columns: 100px, 300px, 100px;*/
 }
 
+.grid-component {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.grid-button {
+  display: grid;
+  grid-template-columns: 3fr .5fr 3fr;
+}
+
 .arrow {
   width:10%;
   height: auto;
   z-index: 2;
+  position:relative;
+  top: 40%;
+  transform: translateY(-50);
+}
+/*arrow on the left*/
+.arrow-left {
+  float: right
+}
+/*arrow on the right*/
+.arrow-right {
+  float: left
+}
+
+.title {
+  font-weight: bold;
+  color: gray;
+  font-size: 20px;
+}
+.button {
+  border-radius: 6px;
+  padding: 0 0 0 0;
+  max-width: 190px;
+  height: 45px;
+  padding: 5px;
 }

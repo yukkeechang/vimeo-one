@@ -11,7 +11,7 @@ import bluePrev from '../images/bluePrev.png';
 
 //TODO last: change images, align arrows to imagees
 var monsoon = "https://i.vimeocdn.com/video/595198868_505x160.jpg";
-var beam = "https://i.vimeocdn.com/video/589972810_530x315.jpg";
+var beam = "https://via.placeholder.com/200x300";
 var move = "https://i.vimeocdn.com/video/590587169_530x315.jpg";
 
 const images = [beam, monsoon, move];
@@ -44,14 +44,14 @@ class Carousel extends Component {
 
 
   render() {
-    let arrowNext = this.state.turnBlueNext ? <img className="arrow" src={blueNext}/> :<img className="arrow" src={whiteNext}/>
-    let arrowPrev = this.state.turnBluePrev ? <img className="arrow" src={bluePrev}/> :<img className="arrow" src={whitePrev}/>
+    let arrowNext = this.state.turnBlueNext ? <img className="arrow arrow-right"  src={blueNext}/> :<img  className="arrow arrow-right" src={whiteNext}/>
+    let arrowPrev = this.state.turnBluePrev ? <img className="arrow arrow-left" src={bluePrev}/> :<img className="arrow arrow-left" src={whitePrev}/>
     return (
       <div>
         <div className="grid-carousel">
-          <div onClick={this.prev.bind(this)} style={{backgroundColor: "blue"}}>{arrowPrev}</div>
-          <CarouselComponent current={this.state.current} images={images}/>
-          <div onClick={this.next.bind(this)}  style={{backgroundColor: "red"}}>{arrowNext}</div>
+          <div onClick={this.prev.bind(this)} style={{backgroundColor: "#D8D8D8", position: "relative"}}>{arrowPrev}</div>
+          <div style={{backgroundColor: "gray"}}><CarouselComponent current={this.state.current} images={images}/></div>
+          <div onClick={this.next.bind(this)}  style={{backgroundColor: "#D8D8D8"}}>{arrowNext}</div>
         </div>
       </div>
     )
@@ -63,3 +63,4 @@ class Carousel extends Component {
 
 export default Carousel;
 //className="backgroundImage" style={{backgroundImage: "https://i.vimeocdn.com/video/595198868_505x160.jpg"}}
+//style={{position:'relative', top: '50%', transform: 'translateY(-50)'}}

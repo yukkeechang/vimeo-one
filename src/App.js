@@ -5,16 +5,19 @@ import Beams from './components/Beams';
 import Carousel from './components/Carousel';
 
 class App extends Component {
+
   render() {
     return (
       <div>
-  {/*
-          <Monsoon/>
-          <Beams/>
+    {/*
+      <Monsoon/>
+      <Beams/>
     */}
 
+<Carousel/>
 
-          <Carousel/>
+
+          {/*  */}
 
       </div>
     );
