@@ -1,3 +1,11 @@
+
+
+html, body, body>#root, #app, #app>div {
+  height: 100%
+}
+.hundred {
+  height: 100%
+}
 /*setting up CSS Grid*/
 .grid {
   display: grid;

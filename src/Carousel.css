@@ -25,6 +25,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   /*grid-template-columns: 100px, 300px, 100px;*/
+  height: 100%;
 }
 
 .grid-component {
@@ -37,7 +38,7 @@
 }
 
 .arrow {
-  width:10%;
+  width: 8%;
   height: auto;
   z-index: 2;
   position:relative;
@@ -55,7 +56,7 @@
 
 .title {
   font-weight: bold;
-  color: gray;
+  color: black;
   font-size: 20px;
 }
 .button {

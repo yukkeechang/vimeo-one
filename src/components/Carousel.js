@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CarouselComponent from './CarouselComponent';
 import '../Carousel.css';
+import '../App.css';
 
 //Arrow Icons
 import whiteNext from '../images/whiteNext.png';
@@ -47,7 +48,7 @@ class Carousel extends Component {
     let arrowNext = this.state.turnBlueNext ? <img className="arrow arrow-right"  src={blueNext}/> :<img  className="arrow arrow-right" src={whiteNext}/>
     let arrowPrev = this.state.turnBluePrev ? <img className="arrow arrow-left" src={bluePrev}/> :<img className="arrow arrow-left" src={whitePrev}/>
     return (
-      <div>
+      <div className="hundred">
         <div className="grid-carousel">
           <div onClick={this.prev.bind(this)} style={{backgroundColor: "#D8D8D8", position: "relative"}}>{arrowPrev}</div>
           <div style={{backgroundColor: "gray"}}><CarouselComponent current={this.state.current} images={images}/></div>
