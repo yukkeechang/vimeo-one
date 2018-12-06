@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import CarouselComponent from './CarouselComponent';
 import '../Carousel.css';
-//import '../App.css';
-import {CSSTransitionGroup} from 'react-transition-group';
+
+//Arrow Icons
 import whiteNext from '../images/whiteNext.png';
 import whitePrev from '../images/whitePrev.png';
 import blueNext from '../images/blueNext.png';
 import bluePrev from '../images/bluePrev.png';
+
 
 //TODO last: change images, align arrows to imagees
 var monsoon = "https://i.vimeocdn.com/video/595198868_505x160.jpg";
@@ -48,7 +50,7 @@ class Carousel extends Component {
       <div>
         <div className="grid-carousel">
           <div onClick={this.prev.bind(this)} style={{backgroundColor: "blue"}}>{arrowPrev}</div>
-          <div style={{backgroundColor: "green"}}><img className="carouselImage" src={images[this.state.current]}/></div>
+          <CarouselComponent current={this.state.current} images={images}/>
           <div onClick={this.next.bind(this)}  style={{backgroundColor: "red"}}>{arrowNext}</div>
         </div>
       </div>
