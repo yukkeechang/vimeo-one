@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CarouselComponent from './CarouselComponent';
 import '../Carousel.css';
 import '../App.css';
+import nichts from '../images/nichts.png';
+import vice from '../images/vice.png';
 
 //Arrow Icons
 import whiteNext from '../images/whiteNext.png';
@@ -11,11 +13,13 @@ import bluePrev from '../images/bluePrev.png';
 
 
 //TODO last: change images, align arrows to imagees
-var monsoon = "https://i.vimeocdn.com/video/595198868_505x160.jpg";
-var beam = "https://via.placeholder.com/200x300";
-var move = "https://i.vimeocdn.com/video/590587169_530x315.jpg";
+// var monsoon = "https://i.vimeocdn.com/video/595198868_505x160.jpg";
+// var beam = "https://i.vimeocdn.com/video/589972810_530x315.jpg";
+// var move = "https://i.vimeocdn.com/video/590587169_530x315.jpg";
 
-const images = [beam, monsoon, move];
+// const images = [beam, monsoon, move];
+let placeholder = "https://via.placeholder.com/200x250"
+const images = [nichts, placeholder, vice];
 const size = images.length;
 
 
