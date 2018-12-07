@@ -19,8 +19,12 @@ html, body, body>#root, #app, #app>div {
 }
 .grid-beams {
   color: white;
-  background-image: linear-gradient(to bottom, #282828, #808080, 	#D0D0D0);
+  background-image: linear-gradient(to bottom, #282828, #808080);
 }
+.grid-move{
+  background-image: linear-gradient(to bottom, #808080, 	#D0D0D0);
+}
+
 .responsive-img {
     max-width: 100%;
     height: auto;
@@ -42,6 +46,15 @@ html, body, body>#root, #app, #app>div {
     grid-auto-rows: minmax(100px, auto);
     padding: 5%;
   }
+  .grid-move {
+    display: grid;
+    grid-template-row: 100%;
+
+  }
+  .grid-move > img:first-child {
+    grid-row-start: 2;
+  }
+
 }
 /*custom css mobile/small screens*/
 @media screen and (max-width: 600px) {
