@@ -1,4 +1,4 @@
-## This is the Vimeo take home assesment for the front-end position of the Growth team. 
+## This is the Vimeo take home assesment for the front-end internship position of the Growth team. 
 https://codepen.io/vimeo-front-end/pen/ozEQEQ
 
 
