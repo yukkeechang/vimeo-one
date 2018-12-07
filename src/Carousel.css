@@ -1,10 +1,11 @@
-/*--grid system for page--*/
+/***---grid system---***/
 #gridCarousel {
   display: grid;
+  /*The 100% is to set the background image*/
   grid-template-columns: 100% 20% 60% 20%;
   grid-template-rows: 100% 1fr 1fr 1fr;
   height: auto;
-} /*change height to 100% for end of screen but it stretches out the image*/
+} /* option: change height to 100% for end of screen but it stretches out the image*/
 
 .background {
   z-index:1;
@@ -29,17 +30,16 @@
   left: -100vw;
   z-index:50;
 }
-
 .prevDiv {
   position: relative;
   left: -100vw;
   z-index:50;
 }
-/*--end of grid system--*/
+/***---end of grid system---***/
 
 
 
-/*--grid for carousel component--*/
+/***---grid for carousel---***/
 .grid-component {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
@@ -47,7 +47,6 @@
   top: 8%;
   transform: translateY(-50);
 }
-
 .carouselImage {
   top: 20px;
   max-width: 100%;
@@ -55,15 +54,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /*float: left;*/
 }
-
 /*grid to align the 2 buttons*/
 .grid-button {
   display: grid;
   grid-template-columns: 5fr .5fr 7fr;
 }
-
 /*for the arrow icons itself*/
 .arrow {
   width: 8%;
@@ -82,26 +78,21 @@
   float: left;
   padding-left: 20px;
 }
-
 .text {
   color: white;
   padding: 10px;
 }
-
 .text-title {
   font-weight: bold;
   font-size: 2em;
 }
-
 .text-description {
   font-size: 1em;
 }
-
 .text-button {
   font-size: 1.2em;
   font-weight: bold;
 }
-
 .button {
   border-radius: 6px;
   padding: 0 0 0 0;
@@ -109,7 +100,6 @@
   height: 45px;
   padding: 5px;
 }
-
 .internal-button {
   display: grid;
   grid-template-columns: 2fr  4fr;
@@ -121,10 +111,11 @@
  .carouselText {
   padding-left: 2.1vw;
 }
-/*--end grid for carousel component--*/
-/*-----------------------------------------------------------------------------------*/
-/*setting up responsiveness for the page*/
+/***---end of grid for carousel---***/
 
+
+
+/***---setting up responsiveness for the page---***/
 /*tablets (medium) screens*/
 @media only screen and (max-width: 900px) {
   #gridCarousel {
@@ -147,27 +138,24 @@
     grid-template-columns: 100% 10% 80% 10%;
     grid-template-rows: 100% 1fr 1fr 1fr;
     height: 100%;
-  } /*change height to 100% but it stretches out the image*/
-
-  .background {
+  }
+ .background {
     z-index:1;
     background-color: #323232;
     height: 100%
   }
-  .backgroundImage {
+ .backgroundImage {
     width: 100%;
     height: auto;
     opacity: 0.3;
     transform:  translateY(15%);
   }
-
-  .carouselContent {
+ .carouselContent {
     position: relative;
     left: -100vw;
     z-index:3;
-    /*transform:  translateY(25%);*/
   }
-  .arrow {
+ .arrow {
     width: 35%;
     height: auto;
     position:relative;
@@ -175,14 +163,13 @@
     transform: translateY(-50%);
   }
   /*arrow on the left*/
-  .arrow-prev {
+ .arrow-prev {
     padding-right: 0px;
   }
   /*arrow on the right*/
   .arrow-next {
     padding-left: 0px;
   }
-{/*--carousel component---*/}
 .grid-component {
   display: grid;
   grid-template-columns: 100%;
@@ -190,8 +177,7 @@
   top: 1%;
   transform: translateY(-50);
   }
-
-  .grid-button {
+ .grid-button {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 70%;
@@ -207,11 +193,3 @@
     font-weight: bold;
   }
 }
-/*
-Small screen only
-
-
-Div for image auto left and auto right
-Arrow next -> no right padding
-Arrow prep -> delete both
-Top 90% (bring arrow down)*/

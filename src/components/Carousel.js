@@ -12,12 +12,12 @@ import blueNext from '../images/blueNext.png';
 import bluePrev from '../images/bluePrev.png';
 
 
-//TODO last: change images, align arrows to imagees
 // var monsoon = "https://i.vimeocdn.com/video/595198868_505x160.jpg";
 // var beam = "https://i.vimeocdn.com/video/589972810_530x315.jpg";
 // var move = "https://i.vimeocdn.com/video/590587169_530x315.jpg";
-
 // const images = [beam, monsoon, move];
+
+//used placeholder images to match carousel
 let placeholder = "https://via.placeholder.com/200x250"
 const images = [nichts, placeholder, vice];
 const size = images.length;

@@ -9,16 +9,11 @@ class App extends Component {
   render() {
     return (
       <div className="hundred">
-    {/*
-      <Monsoon/>
-      <Beams/>
-    */}
-
-<Carousel/>
-
-
-          {/*  */}
-
+        {/*
+          <Monsoon/>
+          <Beams/>
+        */}
+       <Carousel/>
       </div>
     );
   }
