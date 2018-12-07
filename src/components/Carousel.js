@@ -23,13 +23,16 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      //For index in image array
       current: 0,
       index: 0,
+      //For the arrow colors
       turnBluePrev: false,
       turnBlueNext: false
     }
   }
 
+  //Functions to change index and current (basically functions for the carousel)
   prev() {
     this.state.index === 0 ?
     this.setState({index: size-1, current: size-1}) :
@@ -45,23 +48,20 @@ class Carousel extends Component {
 
 
   render() {
-    let arrowNext = this.state.turnBlueNext ? <img className="arrow arrow-right"  src={blueNext}/> :<img  className="arrow arrow-right" src={whiteNext}/>
-    let arrowPrev = this.state.turnBluePrev ? <img className="arrow arrow-left" src={bluePrev}/> :<img className="arrow arrow-left" src={whitePrev}/>
+    let imageUrl = images[this.state.current];
+    let arrowNext = this.state.turnBlueNext ? <img className="arrow arrow-next"  src={blueNext}/> :<img  className="arrow arrow-next" src={whiteNext}/>
+    let arrowPrev = this.state.turnBluePrev ? <img className="arrow arrow-prev" src={bluePrev}/> :<img className="arrow arrow-prev" src={whitePrev}/>
     return (
       <div className="hundred">
-        <div className="grid-carousel">
-          <div onClick={this.prev.bind(this)} style={{backgroundColor: "#D8D8D8", position: "relative"}}>{arrowPrev}</div>
-          <div style={{backgroundColor: "gray"}}><CarouselComponent current={this.state.current} images={images}/></div>
-          <div onClick={this.next.bind(this)}  style={{backgroundColor: "#D8D8D8"}}>{arrowNext}</div>
+        <div id="gridCarousel">
+          <div className="background"><img className="backgroundImage" src={imageUrl}/></div>
+          <div className="prevDiv" onClick={this.prev.bind(this)}>{arrowPrev}</div>
+          <div className="carouselContent"><CarouselComponent current={this.state.current} images={images}/></div>
+          <div className="nextDiv" onClick={this.next.bind(this)}>{arrowNext}</div>
         </div>
       </div>
     )
   }
 }
 
-
-
-
 export default Carousel;
-//className="backgroundImage" style={{backgroundImage: "https://i.vimeocdn.com/video/595198868_505x160.jpg"}}
-//style={{position:'relative', top: '50%', transform: 'translateY(-50)'}}
