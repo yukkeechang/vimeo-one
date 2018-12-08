@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Carousel from './components/Carousel';
 import Grid from './components/Grid';
-import ImageComponent from './components/ImageComponent';
-import TitleComponent from './components/TitleComponent';
-import TextComponent from './components/TextComponent';
+import Image from './components/ImageComponent';
+import Title from './components/TitleComponent';
+import Text from './components/TextComponent';
 
 class App extends Component {
 
@@ -14,23 +14,23 @@ class App extends Component {
       <div className="hundred">
         <Grid>
           <div>
-            <TitleComponent title="MONSOON III" color="black"/>
-            <TextComponent text={filler} color="black"/>
+            <Title title="MONSOON III" color="black"/>
+            <Text text={filler} color="black"/>
           </div>
-          <ImageComponent image={"https://i.vimeocdn.com/video/595198868_505x160.jpg"}/>
+          <Image image={"https://i.vimeocdn.com/video/595198868_505x160.jpg"}/>
         </Grid>
         <Grid gridClass="grid-beams">
           <div>
-            <TitleComponent title="BEAMS" color="white"/>
-            <TextComponent text={filler} color="white"/>
+            <Title title="BEAMS" color="white"/>
+            <Text text={filler} color="white"/>
           </div>
-          <ImageComponent image={"https://i.vimeocdn.com/video/589972810_530x315.jpg"}/>
+          <Image image={"https://i.vimeocdn.com/video/589972810_530x315.jpg"}/>
         </Grid>
         <Grid gridClass="grid-move">
-          <ImageComponent image={"https://i.vimeocdn.com/video/590587169_530x315.jpg"}/>
+          <Image image={"https://i.vimeocdn.com/video/590587169_530x315.jpg"}/>
           <div>
-            <TitleComponent title="MOVE" color="black"/>
-            <TextComponent text={filler} color="black"/>
+            <Title title="MOVE" color="black"/>
+            <Text text={filler} color="black"/>
           </div>
         </Grid>
        <Carousel/>

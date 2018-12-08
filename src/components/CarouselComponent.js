@@ -1,13 +1,14 @@
 import React from 'react';
 import '../Carousel.css';
 import '../App.css';
+import Image from './ImageComponent';
 import hexIcon from '../images/hexIcon.png';
 
 const CarouselComponent = (props) => {
   return (
     <div className="grid-component">
-      <div><img className="carouselImage"src={props.images[props.current]}/></div>
-      <div className="carouselT">
+      <div><Image className="carouselImage" image={props.images[props.current]}/></div>
+      <div>
         <div className="text text-title">title title</div>
         <div className="text text-description">filler text succulents lo-fi cred offal migas cornhole semiotics. Seitan cray ethical austin coloring book </div>
         <div className="grid-button">

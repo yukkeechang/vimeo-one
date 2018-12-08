@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CarouselComponent from './CarouselComponent';
 import '../Carousel.css';
-import '../App.css';
+
 import nichts from '../images/nichts.png';
 import vice from '../images/vice.png';
 
@@ -10,7 +10,6 @@ import whiteNext from '../images/whiteNext.png';
 import whitePrev from '../images/whitePrev.png';
 import blueNext from '../images/blueNext.png';
 import bluePrev from '../images/bluePrev.png';
-
 
 // var monsoon = "https://i.vimeocdn.com/video/595198868_505x160.jpg";
 // var beam = "https://i.vimeocdn.com/video/589972810_530x315.jpg";
@@ -55,6 +54,7 @@ class Carousel extends Component {
     let imageUrl = images[this.state.current];
     let arrowNext = this.state.turnBlueNext ? <img className="arrow arrow-next"  src={blueNext}/> :<img  className="arrow arrow-next" src={whiteNext}/>
     let arrowPrev = this.state.turnBluePrev ? <img className="arrow arrow-prev" src={bluePrev}/> :<img className="arrow arrow-prev" src={whitePrev}/>
+
     return (
       <div className="hundred">
         <div id="gridCarousel">

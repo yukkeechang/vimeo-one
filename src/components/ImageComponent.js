@@ -3,7 +3,7 @@ import '../App.css';
 
 const Image = (props) => {
   return (
-    <img src={props.image} className="responsive-img"/>
+    <img src={props.image} className={"responsive-img" || `${props.className}`}/>
   )
 }
 
